@@ -1,6 +1,7 @@
 import {fetchSafety } from './thunks/fetchSafety';
 import {fetchVaccines } from './thunks/fetchVaccines';
 import React, { Component } from 'react';
+import CountriesContainer from './containers/CountriesContainer';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -8,7 +9,6 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchSafety();
     this.props.fetchVaccines();
-    
   }
 
   render() {
@@ -17,6 +17,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Travel Safe</h1>
         </header>
+        <CountriesContainer />
       </div>
     );
   }

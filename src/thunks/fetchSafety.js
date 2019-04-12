@@ -16,3 +16,5 @@ export const fetchSafety = () => {
     }
   }
 }
+
+// pass in URL and action
