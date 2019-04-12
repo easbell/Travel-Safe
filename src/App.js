@@ -1,4 +1,5 @@
 import {fetchSafety } from './thunks/fetchSafety';
+import {fetchVaccines } from './thunks/fetchVaccines';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
@@ -6,6 +7,8 @@ import './App.css';
 class App extends Component {
   componentDidMount() {
     this.props.fetchSafety();
+    this.props.fetchVaccines();
+    
   }
 
   render() {
@@ -20,7 +23,13 @@ class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchSafety: () => dispatch(fetchSafety())
+  fetchSafety: () => dispatch(fetchSafety()),
+  fetchVaccines: () => dispatch(fetchVaccines())
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export const mapStateToProps = (state) => ({
+  safety: state.safety,
+  vaccines: state.vaccines
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

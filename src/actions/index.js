@@ -3,6 +3,11 @@ export const setSafety = (data) => ({
   data
 });
 
+export const setVaccines = (data) => ({
+  type: 'SET_VACCINES',
+  data
+});
+
 export const hasError = (message) => ({
   type: 'HAS_ERROR',
   message
