@@ -1,0 +1,40 @@
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: -4px 4px 11px -5px rgba(97,97,97,1);
+  width: 80%;
+  margin: 40px auto;
+  height: 110px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.country:hover {
+  box-shadow: -7px 7px 12px -5px rgba(97,97,97,1)
+}
+
+.rating {
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  font-size: 22px;
+  color: #fff;
+  border: 0;
+}
+
+.L {
+  background-color: #37d57b;
+}
+
+.M {
+  background-color: #82b8f7;
+}
+
+.H {
+  background-color: #fbf282;
+}
+
+.E {
+  background-color: #ee3649;
+}

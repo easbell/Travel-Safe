@@ -1,7 +1,7 @@
 import {fetchSafety } from './thunks/fetchSafety';
 import {fetchVaccines } from './thunks/fetchVaccines';
 import React, { Component } from 'react';
-import CountriesContainer from './containers/CountriesContainer';
+import CountriesContainer from './containers/CountriesContainer/CountriesContainer';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -28,9 +28,4 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchVaccines: () => dispatch(fetchVaccines())
 });
 
-export const mapStateToProps = (state) => ({
-  safety: state.safety,
-  vaccines: state.vaccines
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
