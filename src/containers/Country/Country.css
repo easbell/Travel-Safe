@@ -30,6 +30,10 @@
   text-decoration: none;
 }
 
+.add {
+  cursor: pointer;
+}
+
 .L {
   background-color: #37d57b;
 }

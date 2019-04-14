@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './Country.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setSaved } from '../../actions';
+import cogoToast from 'cogo-toast';
 
 export class Country extends Component {
   constructor() {
@@ -35,10 +35,13 @@ export class Country extends Component {
     const localSaved = localStorage.getItem('saved')
     const parsed = JSON.parse(localSaved)
     if(parsed && !localSaved.includes(id)) {
-      localStorage.setItem('saved', JSON.stringify([...parsed, id]))
+      localStorage.setItem('saved', JSON.stringify([...parsed, id]));
     } else if(!parsed) {
-      localStorage.setItem('saved', JSON.stringify([id]))
+      localStorage.setItem('saved', JSON.stringify([id]));
     }
+    cogoToast.success('Country was added.', { 
+      position: 'bottom-left'
+    });
   }
   
   render() {
@@ -46,22 +49,18 @@ export class Country extends Component {
     const { rating } = this.state;
     return (
       <div className='country'>
-        <button className='btn' onClick={this.addCountry}>+</button>
+        <button className='btn add' onClick={this.addCountry}>+</button>
         <Link to={`/details/${id}`} style={{ textDecoration: 'none' }}>
           <h2>{name}</h2>
-          <button className={classnames('btn', rating)}>{rating}</button>
         </Link>
+        <button className={classnames('btn', rating)}>{rating}</button>
       </div>
     )
   }
 }
 
-export const mapDispatchToProps = (dispatch) => ({
-  setSaved: (id) => dispatch(setSaved(id))
-});
-
 export const mapStateToProps = state => ({
   saved: state.saved
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Country);
+export default connect(mapStateToProps)(Country);

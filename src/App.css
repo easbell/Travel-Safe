@@ -18,3 +18,18 @@ h1 {
 h1 span {
   font-weight: 500;
 }
+
+.saved {
+  text-decoration: none;
+  background-color: #000;
+  opacity: .8;
+  border-radius: 5px;
+  padding: 13px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 21px;
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  text-decoration: none;
+}

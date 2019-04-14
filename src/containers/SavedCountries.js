@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 
 export class SavedCountries extends Component {
   filterCountries = () => {
-    const { saved, data } = this.props;
+    const localSaved = localStorage.getItem('saved')
+    const parsed = JSON.parse(localSaved)
+    const { data } = this.props;
     let filtered = []
     data.forEach(country => {
-      saved.forEach(savedCountry => {
+      parsed.forEach(savedCountry => {
         if(country.id === savedCountry) {
           filtered.push(country)
         }
@@ -26,8 +28,7 @@ export class SavedCountries extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  data: state.data,
-  saved: state.saved
+  data: state.data
 });
 
 export default connect(mapStateToProps)(SavedCountries);
