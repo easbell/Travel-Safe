@@ -9,6 +9,8 @@ import './App.css';
 export class App extends Component {
   componentDidMount() {
     this.props.fetchData();
+    const stored = localStorage.getItem('saved');
+    console.log(stored)
   }
 
   render() {

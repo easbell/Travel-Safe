@@ -3,13 +3,20 @@ import classnames from 'classnames';
 import './Country.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { saveCountry } from '../../thunks/saveCountry';
+import { setSaved } from '../../actions';
 
 export class Country extends Component {
   addCountry = () => {
-    this.props.saveCountry(this.props.id)
+    const { id } = this.props
+    const localSaved = localStorage.getItem('saved')
+    const parsed = JSON.parse(localSaved)
+    if(parsed) {
+      localStorage.setItem('saved', JSON.stringify([...parsed, id]))
+    } else {
+      localStorage.setItem('saved', JSON.stringify([id]))
+    }
   }
-
+  
   render() {
     return (
       <div className='country'>
@@ -24,7 +31,11 @@ export class Country extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  saveCountry: (id) => dispatch(saveCountry(id))
+  setSaved: (id) => dispatch(setSaved(id))
 });
 
-export default connect(null, mapDispatchToProps)(Country);
+export const mapStateToProps = state => ({
+  saved: state.saved
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Country);
