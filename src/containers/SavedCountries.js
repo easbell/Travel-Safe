@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 export class SavedCountries extends Component {
   filterCountries = () => {
     const localSaved = localStorage.getItem('saved')
+    if(!localSaved) return <p>Sorry, you don't have any favorites.</p>
     const parsed = JSON.parse(localSaved)
     const { data } = this.props;
     let filtered = []
