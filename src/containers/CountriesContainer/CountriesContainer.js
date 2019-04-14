@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './CountriesContainer.css';
 import { Country } from '../Country/Country';
 import fuzzyFilterFactory from "react-fuzzy-filter";
-const { InputFilter, FilterResults, changeInputValue } = fuzzyFilterFactory();
+const { InputFilter, FilterResults } = fuzzyFilterFactory();
 
 export class CountriesContainer extends Component {
   checkRating = (country) => {
@@ -18,7 +19,6 @@ export class CountriesContainer extends Component {
   }
 
   cleanData = (countries) => {
-    const { data } = this.props;
     return countries.map(country => {
       let rating = this.checkRating(country)
       return <Country key={country.name} id={country.name} {...country} rating={rating}/>
@@ -39,7 +39,7 @@ export class CountriesContainer extends Component {
         <FilterResults items={data} fuseConfig={fuseConfig}>
           {filteredItems => {
             return (
-              <div>
+              <div className='container'>
                 {this.cleanData(filteredItems)}
               </div>
             )

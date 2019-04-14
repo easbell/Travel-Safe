@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryDetails should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CountryDetails
+    id="AF"
+    name="Afghanistan"
+    rating={5}
+    vaccines={
+      Object {
+        "most travelers": Array [
+          "Hepatitis A",
+          "Typhoid",
+          "Polio",
+        ],
+        "some travelers": Array [
+          "Hepatitis B",
+          "Cholera",
+          "Malaria",
+          "Rabies",
+          "Yellow Fever",
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          to="/"
+        >
+          Back to Home
+        </Link>,
+        <h2>
+          Afghanistan
+        </h2>,
+        <h4>
+          Safety Rating: 
+          5
+           / 5
+        </h4>,
+        <h4>
+          Recommended Vaccines:
+        </h4>,
+        Array [
+          <p>
+            most travelers
+            : 
+            Hepatitis A
+            Typhoid
+            Polio
+          </p>,
+          <p>
+            some travelers
+            : 
+            Hepatitis B
+            Cholera
+            Malaria
+            Rabies
+            Yellow Fever
+          </p>,
+        ],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Back to Home",
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "Back to Home",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Afghanistan",
+        },
+        "ref": null,
+        "rendered": "Afghanistan",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Safety Rating: ",
+            5,
+            " / 5",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Safety Rating: ",
+          5,
+          " / 5",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Recommended Vaccines:",
+        },
+        "ref": null,
+        "rendered": "Recommended Vaccines:",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "Hepatitis A,Typhoid,Polio",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "most travelers",
+            ": ",
+            Array [
+              "Hepatitis A",
+              "Typhoid",
+              "Polio",
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "most travelers",
+          ": ",
+          "Hepatitis A",
+          "Typhoid",
+          "Polio",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Hepatitis B,Cholera,Malaria,Rabies,Yellow Fever",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "some travelers",
+            ": ",
+            Array [
+              "Hepatitis B",
+              "Cholera",
+              "Malaria",
+              "Rabies",
+              "Yellow Fever",
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "some travelers",
+          ": ",
+          "Hepatitis B",
+          "Cholera",
+          "Malaria",
+          "Rabies",
+          "Yellow Fever",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            to="/"
+          >
+            Back to Home
+          </Link>,
+          <h2>
+            Afghanistan
+          </h2>,
+          <h4>
+            Safety Rating: 
+            5
+             / 5
+          </h4>,
+          <h4>
+            Recommended Vaccines:
+          </h4>,
+          Array [
+            <p>
+              most travelers
+              : 
+              Hepatitis A
+              Typhoid
+              Polio
+            </p>,
+            <p>
+              some travelers
+              : 
+              Hepatitis B
+              Cholera
+              Malaria
+              Rabies
+              Yellow Fever
+            </p>,
+          ],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Back to Home",
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Back to Home",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Afghanistan",
+          },
+          "ref": null,
+          "rendered": "Afghanistan",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Safety Rating: ",
+              5,
+              " / 5",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Safety Rating: ",
+            5,
+            " / 5",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Recommended Vaccines:",
+          },
+          "ref": null,
+          "rendered": "Recommended Vaccines:",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "Hepatitis A,Typhoid,Polio",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "most travelers",
+              ": ",
+              Array [
+                "Hepatitis A",
+                "Typhoid",
+                "Polio",
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "most travelers",
+            ": ",
+            "Hepatitis A",
+            "Typhoid",
+            "Polio",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Hepatitis B,Cholera,Malaria,Rabies,Yellow Fever",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "some travelers",
+              ": ",
+              Array [
+                "Hepatitis B",
+                "Cholera",
+                "Malaria",
+                "Rabies",
+                "Yellow Fever",
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "some travelers",
+            ": ",
+            "Hepatitis B",
+            "Cholera",
+            "Malaria",
+            "Rabies",
+            "Yellow Fever",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

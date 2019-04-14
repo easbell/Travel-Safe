@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom';
 import CountryDetails from './containers/CountryDetails/CountryDetails';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     this.props.fetchData();
   }
@@ -24,7 +24,7 @@ class App extends Component {
           const { id } = match.params;
           const { data } = this.props;
           const selectedCountry = data.find(country => {
-            return country.id == id
+            return country.id === id
           })
           if(selectedCountry) {
             return <CountryDetails {...selectedCountry} />
