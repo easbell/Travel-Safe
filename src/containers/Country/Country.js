@@ -34,9 +34,9 @@ export class Country extends Component {
     const { id } = this.props
     const localSaved = localStorage.getItem('saved')
     const parsed = JSON.parse(localSaved)
-    if(parsed) {
+    if(parsed && !localSaved.includes(id)) {
       localStorage.setItem('saved', JSON.stringify([...parsed, id]))
-    } else {
+    } else if(!parsed) {
       localStorage.setItem('saved', JSON.stringify([id]))
     }
   }
