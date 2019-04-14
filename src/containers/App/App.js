@@ -1,10 +1,10 @@
-import {fetchData } from './thunks/fetchData';
+import {fetchData } from '../../thunks/fetchData';
 import React, { Component } from 'react';
-import CountriesContainer from './containers/CountriesContainer/CountriesContainer';
-import SavedCountries from './containers/SavedCountries';
+import CountriesContainer from '../../components/CountriesContainer/CountriesContainer';
+import SavedCountries from '../SavedCountries/SavedCountries';
 import { connect } from 'react-redux';
 import { Route, NavLink } from 'react-router-dom';
-import CountryDetails from './containers/CountryDetails/CountryDetails';
+import CountryDetails from '../CountryDetails/CountryDetails';
 import './App.css';
 
 export class App extends Component {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import CountryContainer from './CountriesContainer/CountriesContainer';
+import CountryContainer from '../../components/CountriesContainer/CountriesContainer';
 import { connect } from 'react-redux';
 
 export class SavedCountries extends Component {
   filterCountries = () => {
     const localSaved = localStorage.getItem('saved')
-    if(!localSaved) return <p>Sorry, you don't have any favorites.</p>
+    if(!localSaved) return <p>Please add to favorites.</p>
     const parsed = JSON.parse(localSaved)
     const { data } = this.props;
     let filtered = []

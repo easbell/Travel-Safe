@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './CountriesContainer.css';
-import Country from '../Country/Country';
+import Country from '../../containers/Country/Country';
 import fuzzyFilterFactory from "react-fuzzy-filter";
 const { InputFilter, FilterResults } = fuzzyFilterFactory();
 
