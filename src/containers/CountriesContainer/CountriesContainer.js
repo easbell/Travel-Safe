@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './CountriesContainer.css';
-import { Country } from '../Country/Country';
+import Country from '../Country/Country';
 import fuzzyFilterFactory from "react-fuzzy-filter";
 const { InputFilter, FilterResults } = fuzzyFilterFactory();
 
@@ -33,7 +33,7 @@ export class CountriesContainer extends Component {
       tokenize: true,
       threshold: 0
     };
-    
+
     return (
       <div>
         <InputFilter />

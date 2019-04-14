@@ -8,7 +8,7 @@
   height: 110px;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0px 110px;
+  padding: 0px 6%;
   background: #fff;
   opacity: .8;
   color: #000;
@@ -19,10 +19,11 @@
   opacity: 1;
 }
 
-.rating {
+.btn {
   border-radius: 50%;
   height: 55px;
   width: 55px;
+  background-color: #364A99;
   font-size: 22px;
   color: #fff;
   border: 0;
