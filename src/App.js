@@ -1,8 +1,9 @@
 import {fetchData } from './thunks/fetchData';
 import React, { Component } from 'react';
 import CountriesContainer from './containers/CountriesContainer/CountriesContainer';
+import SavedCountries from './containers/SavedCountries';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import CountryDetails from './containers/CountryDetails/CountryDetails';
 import './App.css';
 import { setSaved } from './actions';
@@ -15,15 +16,19 @@ export class App extends Component {
   }
 
   render() {
+    const { data } = this.props;
     return (
       <div className="App">
         <h1>Travel<span className='bold'>Safe</span></h1>
+        <Link to='/saved'>Saved Countries</Link>
         <Route exact path='/' render={() => (
-            <CountriesContainer />
+            <CountriesContainer countries={data}/>
+        )} />
+        <Route exact path='/saved' render={() => (
+            <SavedCountries />
         )} />
         <Route path='/details/:id' render={({ match }) => {
           const { id } = match.params;
-          const { data } = this.props;
           const selectedCountry = data.find(country => {
             return country.id === id
           })
@@ -42,7 +47,7 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export const mapStateToProps = (state) => ({
-  data: state.data,
+  data: state.data
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

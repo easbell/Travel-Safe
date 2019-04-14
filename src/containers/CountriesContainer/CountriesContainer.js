@@ -6,27 +6,14 @@ import fuzzyFilterFactory from "react-fuzzy-filter";
 const { InputFilter, FilterResults } = fuzzyFilterFactory();
 
 export class CountriesContainer extends Component {
-  checkRating = (country) => {
-    if(country.rating <= 2.5) {
-      return 'L'
-    } else if(2.6 <= country.rating && country.rating <= 3.5) {
-      return 'M'
-    } else if(3.6 <= country.rating && country.rating <= 4.5) {
-      return 'H'
-    } else if(country.rating > 4.5) {
-      return 'E'
-    } 
-  }
-
-  cleanData = (countries) => {
-    return countries.map(country => {
-      let rating = this.checkRating(country)
-      return <Country key={country.name} id={country.name} {...country} rating={rating}/>
+  renderCountries = () => {
+    return this.props.countries.map(country => {
+      return <Country key={country.name} {...country}/>
     });
   }
 
   render() {
-    const { data } = this.props;
+    const { countries } = this.props;
     const fuseConfig = {
       keys: ['name'],
       matchAllTokens: true,
@@ -37,11 +24,11 @@ export class CountriesContainer extends Component {
     return (
       <div>
         <InputFilter />
-        <FilterResults items={data} fuseConfig={fuseConfig}>
+        <FilterResults items={countries} fuseConfig={fuseConfig}>
           {filteredItems => {
             return (
               <div className='container'>
-                {this.cleanData(filteredItems)}
+                {this.renderCountries(filteredItems)}
               </div>
             )
           }}
@@ -51,8 +38,4 @@ export class CountriesContainer extends Component {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  data: state.data
-});
-
-export default connect(mapStateToProps)(CountriesContainer);
+export default CountriesContainer;
