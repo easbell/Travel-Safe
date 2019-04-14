@@ -2,10 +2,19 @@
   "name": "final",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/index.js",
+      "!src/reducers/index.js"
+    ]
+  },
   "dependencies": {
     "classnames": "^2.2.6",
+    "cogo-toast": "^1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-fuzzy-filter": "^5.0.1",
     "react-redux": "^7.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",

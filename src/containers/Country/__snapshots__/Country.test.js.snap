@@ -19,50 +19,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="country"
+      >
         <h2>
           France
-        </h2>,
+        </h2>
         <button
           className="rating 2.4"
         >
           2.4
-        </button>,
-      ],
-      "className": "country",
+        </button>
+      </div>,
+      "style": Object {
+        "textDecoration": "none",
+      },
+      "to": "/details/undefined",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "France",
-        },
-        "ref": null,
-        "rendered": "France",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": 2.4,
-          "className": "rating 2.4",
-        },
-        "ref": null,
-        "rendered": 2.4,
-        "type": "button",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -106,6 +83,79 @@ ShallowWrapper {
         },
       ],
       "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="country"
+        >
+          <h2>
+            France
+          </h2>
+          <button
+            className="rating 2.4"
+          >
+            2.4
+          </button>
+        </div>,
+        "style": Object {
+          "textDecoration": "none",
+        },
+        "to": "/details/undefined",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              France
+            </h2>,
+            <button
+              className="rating 2.4"
+            >
+              2.4
+            </button>,
+          ],
+          "className": "country",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "France",
+            },
+            "ref": null,
+            "rendered": "France",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 2.4,
+              "className": "rating 2.4",
+            },
+            "ref": null,
+            "rendered": 2.4,
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

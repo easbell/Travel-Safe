@@ -6,4 +6,4 @@ export const setData = (data) => ({
 export const hasError = (message) => ({
   type: 'HAS_ERROR',
   message
-})
+});

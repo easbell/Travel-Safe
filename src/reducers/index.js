@@ -5,4 +5,4 @@ import { dataReducer } from './dataReducer';
 export const rootReducer = combineReducers({
   error: errorReducer,
   data: dataReducer
-})
+});

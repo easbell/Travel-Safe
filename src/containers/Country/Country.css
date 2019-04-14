@@ -1,26 +1,37 @@
 .country {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: -4px 4px 11px -5px rgba(97,97,97,1);
-  width: 80%;
+  width: 50%;
   margin: 40px auto;
   height: 110px;
   border-radius: 5px;
   cursor: pointer;
+  padding: 0px 6%;
+  background: #fff;
+  opacity: .8;
+  color: #000;
 }
 
 .country:hover {
-  box-shadow: -7px 7px 12px -5px rgba(97,97,97,1)
+  box-shadow: -7px 7px 12px -5px rgba(97,97,97,1);
+  opacity: 1;
 }
 
-.rating {
+.btn {
   border-radius: 50%;
   height: 55px;
   width: 55px;
+  background-color: #364A99;
   font-size: 22px;
   color: #fff;
   border: 0;
+  text-decoration: none;
+}
+
+.add {
+  cursor: pointer;
 }
 
 .L {

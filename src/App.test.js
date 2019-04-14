@@ -1,9 +1,50 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { App, mapDispatchToProps, mapStateToProps } from './App';
+import { shallow } from 'enzyme';
+import { fetchData } from './thunks/fetchData';
 
-it.skip('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+jest.mock('./thunks/fetchData')
+
+describe('App', () => {
+  let wrapper;
+  let mockFn;
+  beforeEach(() => {
+    mockFn = jest.fn();
+    wrapper = shallow(<App fetchData={mockFn}/>)
+  });
+
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call fetchData when mounted', () => {
+    wrapper.instance().componentDidMount();
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with fetchData action', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = fetchData();
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.fetchData();
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    it('returns correct props', () => {
+      const mockState = {
+        data: ['some mock data'],
+        other: 'other'
+      }
+      const expectedProps = {
+        data: ['some mock data']
+      }
+
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expectedProps)
+    });
+  });
 });

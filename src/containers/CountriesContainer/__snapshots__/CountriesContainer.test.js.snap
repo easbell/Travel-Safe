@@ -18,10 +18,70 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": undefined,
+      "children": Array [
+        <InputFilter
+          classPrefix="react-fuzzy-filter"
+          debounceTime={0}
+          inputProps={Object {}}
+          onChange={[Function]}
+        />,
+        <FilterResults
+          defaultAllItems={true}
+          fuseConfig={
+            Object {
+              "keys": Array [
+                "name",
+              ],
+              "matchAllTokens": true,
+              "threshold": 0,
+              "tokenize": true,
+            }
+          }
+          prefilters={Array []}
+        >
+          [Function]
+        </FilterResults>,
+      ],
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "classPrefix": "react-fuzzy-filter",
+          "debounceTime": 0,
+          "inputProps": Object {},
+          "onChange": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": [Function],
+          "defaultAllItems": true,
+          "fuseConfig": Object {
+            "keys": Array [
+              "name",
+            ],
+            "matchAllTokens": true,
+            "threshold": 0,
+            "tokenize": true,
+          },
+          "items": undefined,
+          "prefilters": Array [],
+        },
+        "ref": null,
+        "rendered": [Function],
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -30,10 +90,70 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": undefined,
+        "children": Array [
+          <InputFilter
+            classPrefix="react-fuzzy-filter"
+            debounceTime={0}
+            inputProps={Object {}}
+            onChange={[Function]}
+          />,
+          <FilterResults
+            defaultAllItems={true}
+            fuseConfig={
+              Object {
+                "keys": Array [
+                  "name",
+                ],
+                "matchAllTokens": true,
+                "threshold": 0,
+                "tokenize": true,
+              }
+            }
+            prefilters={Array []}
+          >
+            [Function]
+          </FilterResults>,
+        ],
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "classPrefix": "react-fuzzy-filter",
+            "debounceTime": 0,
+            "inputProps": Object {},
+            "onChange": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": [Function],
+            "defaultAllItems": true,
+            "fuseConfig": Object {
+              "keys": Array [
+                "name",
+              ],
+              "matchAllTokens": true,
+              "threshold": 0,
+              "tokenize": true,
+            },
+            "items": undefined,
+            "prefilters": Array [],
+          },
+          "ref": null,
+          "rendered": [Function],
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
