@@ -1,4 +1,15 @@
 .container {
   height: 800px;
   overflow: scroll;
+  margin-top: 48px;
+}
+
+.react-fuzzy-filter__input {
+  width: 25%;
+  border: 0;
+  box-shadow: 2px 2px 11px #818181;
+  border-radius: 5px;
+  height: 49px;
+  padding-left: 15px;
+  font-size: 20px;
 }

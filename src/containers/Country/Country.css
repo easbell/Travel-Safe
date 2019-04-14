@@ -9,10 +9,14 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 0px 110px;
+  background: #fff;
+  opacity: .8;
+  color: #000;
 }
 
 .country:hover {
-  box-shadow: -7px 7px 12px -5px rgba(97,97,97,1)
+  box-shadow: -7px 7px 12px -5px rgba(97,97,97,1);
+  opacity: 1;
 }
 
 .rating {

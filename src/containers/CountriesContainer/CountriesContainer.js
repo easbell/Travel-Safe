@@ -33,6 +33,7 @@ export class CountriesContainer extends Component {
       tokenize: true,
       threshold: 0
     };
+    
     return (
       <div>
         <InputFilter />

@@ -14,11 +14,9 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Travel<span className='bold'>Safe</span></h1>
         <Route exact path='/' render={() => (
-          <div>
-            <h1>Travel Safe</h1>
             <CountriesContainer />
-          </div>
         )} />
         <Route path='/details/:id' render={({ match }) => {
           const { id } = match.params;

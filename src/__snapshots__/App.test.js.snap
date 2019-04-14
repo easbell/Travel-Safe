@@ -33,6 +33,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <h1>
+          Travel
+          <span
+            className="bold"
+          >
+            Safe
+          </span>
+        </h1>,
         <Route
           exact={true}
           path="/"
@@ -47,6 +55,38 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Travel",
+            <span
+              className="bold"
+            >
+              Safe
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Travel",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Safe",
+              "className": "bold",
+            },
+            "ref": null,
+            "rendered": "Safe",
+            "type": "span",
+          },
+        ],
+        "type": "h1",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -82,6 +122,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <h1>
+            Travel
+            <span
+              className="bold"
+            >
+              Safe
+            </span>
+          </h1>,
           <Route
             exact={true}
             path="/"
@@ -96,6 +144,38 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Travel",
+              <span
+                className="bold"
+              >
+                Safe
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Travel",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Safe",
+                "className": "bold",
+              },
+              "ref": null,
+              "rendered": "Safe",
+              "type": "span",
+            },
+          ],
+          "type": "h1",
+        },
         Object {
           "instance": null,
           "key": undefined,
