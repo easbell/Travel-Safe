@@ -10,14 +10,12 @@ describe('CountriesContainer', () => {
   });
 
   describe('mapStateToProps', () => {
-    it('should return an object with the safety and vaccine objects', () => {
+    it('should return an object with the vaccine object', () => {
       const mockState = {
-        safety: {country: 'France', rating: 2.4},
         vaccines: {country: 'France', vaccines: []},
         other: 'other'
       }
       const expected = {
-        safety: {country: 'France', rating: 2.4},
         vaccines: {country: 'France', vaccines: []}
       }
 

@@ -1,31 +1,46 @@
-import {fetchSafety } from './thunks/fetchSafety';
-import {fetchVaccines } from './thunks/fetchVaccines';
+import {fetchData } from './thunks/fetchData';
 import React, { Component } from 'react';
 import CountriesContainer from './containers/CountriesContainer/CountriesContainer';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
+import CountryDetails from './containers/CountryDetails/CountryDetails';
 import './App.css';
 
 class App extends Component {
   componentDidMount() {
-    this.props.fetchSafety();
-    this.props.fetchVaccines();
+    this.props.fetchData();
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Travel Safe</h1>
-        </header>
-        <CountriesContainer />
+        <Route exact path='/' render={() => (
+          <div>
+            <h1>Travel Safe</h1>
+            <CountriesContainer />
+          </div>
+        )} />
+        <Route path='/details/:id' render={({ match }) => {
+          const { id } = match.params;
+          const { data } = this.props;
+          const selectedCountry = data.find(country => {
+            return country.id == id
+          })
+          if(selectedCountry) {
+            return <CountryDetails {...selectedCountry} />
+          }
+        }} />
       </div>
     );
   }
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchSafety: () => dispatch(fetchSafety()),
-  fetchVaccines: () => dispatch(fetchVaccines())
+  fetchData: () => dispatch(fetchData())
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export const mapStateToProps = (state) => ({
+  data: state.data
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

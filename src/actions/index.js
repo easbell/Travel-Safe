@@ -1,10 +1,5 @@
-export const setSafety = (data) => ({
-  type: 'SET_SAFETY',
-  data
-});
-
-export const setVaccines = (data) => ({
-  type: 'SET_VACCINES',
+export const setData = (data) => ({
+  type: 'SET_DATA',
   data
 });
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { combineData } from '../../helpers/combineData';
 import { Country } from '../Country/Country';
 
 export class CountriesContainer extends Component {
@@ -17,27 +16,25 @@ export class CountriesContainer extends Component {
   }
 
   cleanData = () => {
-    const { safety, vaccines } = this.props;
-    const cleaned = combineData(safety, vaccines);
-    return cleaned.map(country => {
+    const { data } = this.props;
+    return data.map(country => {
       let rating = this.checkRating(country)
-      return <Country key={country.name} {...country} rating={rating}/>
-    })
+      return <Country key={country.name} id={country.name} {...country} rating={rating}/>
+    });
   }
 
   render() {
-    const { safety } = this.props;
+    const { data } = this.props;
     return (
       <div>
-        {safety && this.cleanData()}
+        {data && this.cleanData()}
       </div>
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
-  safety: state.safety,
-  vaccines: state.vaccines
+  data: state.data
 });
 
 export default connect(mapStateToProps)(CountriesContainer);
