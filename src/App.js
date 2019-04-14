@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import CountryDetails from './containers/CountryDetails/CountryDetails';
 import './App.css';
+import { setSaved } from './actions';
 
 export class App extends Component {
   componentDidMount() {
     this.props.fetchData();
     const stored = localStorage.getItem('saved');
-    console.log(stored)
+    this.props.setSaved(JSON.parse(stored));
   }
 
   render() {
@@ -36,11 +37,12 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchData: () => dispatch(fetchData())
+  fetchData: () => dispatch(fetchData()),
+  setSaved: (saved) => dispatch(setSaved(saved))
 });
 
 export const mapStateToProps = (state) => ({
-  data: state.data
+  data: state.data,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

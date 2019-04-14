@@ -6,9 +6,9 @@ export const setData = (data) => ({
 export const hasError = (message) => ({
   type: 'HAS_ERROR',
   message
-})
+});
 
-export const setSaved = (id) => ({
+export const setSaved = (saved) => ({
   type: 'SET_SAVED',
-  id
-})
+  saved
+});
