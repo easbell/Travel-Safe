@@ -1,13 +1,14 @@
 .country {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: -4px 4px 11px -5px rgba(97,97,97,1);
-  width: 80%;
+  width: 50%;
   margin: 40px auto;
   height: 110px;
   border-radius: 5px;
   cursor: pointer;
+  padding: 0px 110px;
 }
 
 .country:hover {
@@ -21,6 +22,7 @@
   font-size: 22px;
   color: #fff;
   border: 0;
+  text-decoration: none;
 }
 
 .L {
