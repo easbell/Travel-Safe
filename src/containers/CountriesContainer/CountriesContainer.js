@@ -5,9 +5,8 @@ import fuzzyFilterFactory from "react-fuzzy-filter";
 const { InputFilter, FilterResults } = fuzzyFilterFactory();
 
 export class CountriesContainer extends Component {
-  renderCountries = () => {
-    console.log('filtering')
-    return this.props.countries.map(country => {
+  renderCountries = (filtered) => {
+    return filtered.map(country => {
       return <Country key={country.name} {...country}/>
     });
   }
@@ -20,6 +19,7 @@ export class CountriesContainer extends Component {
       tokenize: true,
       threshold: 0
     };
+
     return (
       <div>
         {countries.length === 57 && <InputFilter />}
