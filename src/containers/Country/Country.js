@@ -57,18 +57,21 @@ export class Country extends Component {
     this.displayMessage('Country was added to favorites.')      
   }
 
-  toggleCountry = (e) => {
+  removeCountry = () => {
     const { id } = this.props;
+    const localSaved = JSON.parse(localStorage.getItem('saved'))
+    const filteredSaved = localSaved.filter(country => country !== id)
+    localStorage.setItem('saved', JSON.stringify(filteredSaved));
+    this.displayMessage('Country removed from favorites.')
+  }
+
+  toggleCountry = (e) => {
     if(e.target.className.includes('countrySaved')) {
-      this.setState({ saved: false });
-      const localSaved = JSON.parse(localStorage.getItem('saved'))
-      const filteredSaved = localSaved.filter(country => country !== id)
-      localStorage.setItem('saved', JSON.stringify(filteredSaved));
-      this.displayMessage('Country removed from favorites.')
+      this.removeCountry();
     } else {
-      this.setState({ saved: true });
       this.addCountry();
     }
+    this.setState({ saved: !this.state.saved });
   }
   
   render() {

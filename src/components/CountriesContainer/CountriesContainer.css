@@ -2,6 +2,13 @@
   height: 800px;
   overflow: scroll;
   margin-top: 48px;
+  display: grid;
+  grid-template-rows: 150px;
+  grid-gap: 30px;
+  padding: 0px 35px;
+  width: 75%;
+  margin: 48px auto;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
 }
 
 .react-fuzzy-filter__input {
