@@ -19,6 +19,10 @@ h1 span {
   font-weight: 500;
 }
 
+.header { 
+  text-decoration: none;
+}
+
 .saved {
   text-decoration: none;
   background-color: #000;

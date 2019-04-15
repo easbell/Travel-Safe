@@ -16,16 +16,18 @@ export class App extends Component {
     const { data } = this.props;
     return (
       <div className="App">
-        <h1>Travel<span className='bold'>Safe</span></h1>
+        <NavLink to='/' className='header'>
+          <h1>Travel<span className='bold'>Safe</span></h1>
+        </NavLink>
         <Route exact path='/' render={() => (
           <div>
-            <NavLink to='/saved'className='saved'>Saved</NavLink>
+            <NavLink to='/saved' className='saved'>Saved</NavLink>
             <CountriesContainer countries={data}/>
           </div>
         )} />
         <Route exact path='/saved' render={() => (
           <div>
-              <NavLink to='/'className='saved'>Home</NavLink>
+              <NavLink to='/' className='saved'>Home</NavLink>
               <SavedCountries />
             </div>
         )} />
