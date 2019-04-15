@@ -47,6 +47,11 @@ ShallowWrapper {
           render={[Function]}
         />,
         <Route
+          exact={true}
+          path="/saved"
+          render={[Function]}
+        />,
+        <Route
           path="/details/:id"
           render={[Function]}
         />,
@@ -105,6 +110,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "exact": true,
+          "path": "/saved",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
           "path": "/details/:id",
           "render": [Function],
         },
@@ -133,6 +151,11 @@ ShallowWrapper {
           <Route
             exact={true}
             path="/"
+            render={[Function]}
+          />,
+          <Route
+            exact={true}
+            path="/saved"
             render={[Function]}
           />,
           <Route
@@ -183,6 +206,19 @@ ShallowWrapper {
           "props": Object {
             "exact": true,
             "path": "/",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/saved",
             "render": [Function],
           },
           "ref": null,

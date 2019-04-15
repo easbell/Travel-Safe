@@ -19,39 +19,121 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="country"
-      >
-        <h2>
-          France
-        </h2>
+      "children": Array [
         <button
-          className="rating 2.4"
+          className="btn add"
+          onClick={[Function]}
         >
-          2.4
-        </button>
-      </div>,
-      "style": Object {
-        "textDecoration": "none",
-      },
-      "to": "/details/undefined",
+          +
+        </button>,
+        <Link
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+          to="/details/undefined"
+        >
+          <h2>
+            France
+          </h2>
+        </Link>,
+        <button
+          className="btn L"
+        >
+          L
+        </button>,
+      ],
+      "className": "country",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "+",
+          "className": "btn add",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <h2>
+            France
+          </h2>,
+          "style": Object {
+            "textDecoration": "none",
+          },
+          "to": "/details/undefined",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "France",
+          },
+          "ref": null,
+          "rendered": "France",
+          "type": "h2",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "L",
+          "className": "btn L",
+        },
+        "ref": null,
+        "rendered": "L",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
-            France
-          </h2>,
           <button
-            className="rating 2.4"
+            className="btn add"
+            onClick={[Function]}
           >
-            2.4
+            +
+          </button>,
+          <Link
+            style={
+              Object {
+                "textDecoration": "none",
+              }
+            }
+            to="/details/undefined"
+          >
+            <h2>
+              France
+            </h2>
+          </Link>,
+          <button
+            className="btn L"
+          >
+            L
           </button>,
         ],
         "className": "country",
@@ -63,73 +145,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "France",
+            "children": "+",
+            "className": "btn add",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": "France",
-          "type": "h2",
+          "rendered": "+",
+          "type": "button",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": 2.4,
-            "className": "rating 2.4",
-          },
-          "ref": null,
-          "rendered": 2.4,
-          "type": "button",
-        },
-      ],
-      "type": "div",
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div
-          className="country"
-        >
-          <h2>
-            France
-          </h2>
-          <button
-            className="rating 2.4"
-          >
-            2.4
-          </button>
-        </div>,
-        "style": Object {
-          "textDecoration": "none",
-        },
-        "to": "/details/undefined",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h2>
+            "children": <h2>
               France
             </h2>,
-            <button
-              className="rating 2.4"
-            >
-              2.4
-            </button>,
-          ],
-          "className": "country",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
+            "style": Object {
+              "textDecoration": "none",
+            },
+            "to": "/details/undefined",
+          },
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
@@ -140,22 +178,22 @@ ShallowWrapper {
             "rendered": "France",
             "type": "h2",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": 2.4,
-              "className": "rating 2.4",
-            },
-            "ref": null,
-            "rendered": 2.4,
-            "type": "button",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "L",
+            "className": "btn L",
           },
-        ],
-        "type": "div",
-      },
-      "type": [Function],
+          "ref": null,
+          "rendered": "L",
+          "type": "button",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -182,5 +220,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -5,7 +5,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!**/index.js",
+      "!src/index.js",
       "!src/reducers/index.js"
     ]
   },

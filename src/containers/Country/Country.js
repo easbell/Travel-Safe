@@ -9,7 +9,8 @@ export class Country extends Component {
   constructor() {
     super();
     this.state = {
-      rating: ''
+      rating: '',
+      saved: false
     }
   }
 
@@ -35,9 +36,13 @@ export class Country extends Component {
     const localSaved = localStorage.getItem('saved')
     const parsed = JSON.parse(localSaved)
     if(parsed && !localSaved.includes(id)) {
-      localStorage.setItem('saved', JSON.stringify([...parsed, id]));
+      this.setState({ saved: true }, () => {
+        localStorage.setItem('saved', JSON.stringify([...parsed, id]));
+      })
     } else if(!parsed) {
-      localStorage.setItem('saved', JSON.stringify([id]));
+      this.setState({ saved: true }, () => {
+        localStorage.setItem('saved', JSON.stringify([id]));
+      });
     }
     cogoToast.success('Country was added.', { 
       position: 'bottom-left'
@@ -45,11 +50,18 @@ export class Country extends Component {
   }
   
   render() {
+    const classNames = require('classnames');
     const { id, name } = this.props;
-    const { rating } = this.state;
+    const { rating, saved } = this.state;
+    const btnClass = classNames({
+      btn: true,
+      add: true,
+      countrySaved: saved,
+    });
     return (
       <div className='country'>
-        <button className='btn add' onClick={this.addCountry}>+</button>
+        {saved && <button className={btnClass} onClick={this.addCountry}>-</button>}
+        {!saved && <button className={btnClass} onClick={this.addCountry}>+</button>}
         <Link to={`/details/${id}`} style={{ textDecoration: 'none' }}>
           <h2>{name}</h2>
         </Link>

@@ -7,9 +7,8 @@ export class SavedCountries extends Component {
     const localSaved = localStorage.getItem('saved')
     if(!localSaved) return <p>Please add to favorites.</p>
     const parsed = JSON.parse(localSaved)
-    const { data } = this.props;
     let filtered = []
-    data.forEach(country => {
+    this.props.data.forEach(country => {
       parsed.forEach(savedCountry => {
         if(country.id === savedCountry) {
           filtered.push(country)

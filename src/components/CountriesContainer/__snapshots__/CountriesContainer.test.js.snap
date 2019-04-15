@@ -3,7 +3,18 @@
 exports[`CountriesContainer should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CountriesContainer />,
+  Symbol(enzyme.__unrendered__): <CountriesContainer
+    countries={
+      Array [
+        Object {
+          "name": "USA",
+        },
+        Object {
+          "name": "France",
+        },
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -19,12 +30,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <InputFilter
-          classPrefix="react-fuzzy-filter"
-          debounceTime={0}
-          inputProps={Object {}}
-          onChange={[Function]}
-        />,
+        false,
         <FilterResults
           defaultAllItems={true}
           fuseConfig={
@@ -37,6 +43,16 @@ ShallowWrapper {
               "tokenize": true,
             }
           }
+          items={
+            Array [
+              Object {
+                "name": "USA",
+              },
+              Object {
+                "name": "France",
+              },
+            ]
+          }
           prefilters={Array []}
         >
           [Function]
@@ -45,20 +61,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "classPrefix": "react-fuzzy-filter",
-          "debounceTime": 0,
-          "inputProps": Object {},
-          "onChange": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -74,7 +77,14 @@ ShallowWrapper {
             "threshold": 0,
             "tokenize": true,
           },
-          "items": undefined,
+          "items": Array [
+            Object {
+              "name": "USA",
+            },
+            Object {
+              "name": "France",
+            },
+          ],
           "prefilters": Array [],
         },
         "ref": null,
@@ -91,12 +101,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <InputFilter
-            classPrefix="react-fuzzy-filter"
-            debounceTime={0}
-            inputProps={Object {}}
-            onChange={[Function]}
-          />,
+          false,
           <FilterResults
             defaultAllItems={true}
             fuseConfig={
@@ -109,6 +114,16 @@ ShallowWrapper {
                 "tokenize": true,
               }
             }
+            items={
+              Array [
+                Object {
+                  "name": "USA",
+                },
+                Object {
+                  "name": "France",
+                },
+              ]
+            }
             prefilters={Array []}
           >
             [Function]
@@ -117,20 +132,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "classPrefix": "react-fuzzy-filter",
-            "debounceTime": 0,
-            "inputProps": Object {},
-            "onChange": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -146,7 +148,14 @@ ShallowWrapper {
               "threshold": 0,
               "tokenize": true,
             },
-            "items": undefined,
+            "items": Array [
+              Object {
+                "name": "USA",
+              },
+              Object {
+                "name": "France",
+              },
+            ],
             "prefilters": Array [],
           },
           "ref": null,

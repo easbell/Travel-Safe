@@ -3,7 +3,7 @@ import { App, mapDispatchToProps, mapStateToProps } from './App';
 import { shallow } from 'enzyme';
 import { fetchData } from '../../thunks/fetchData';
 
-jest.mock('./thunks/fetchData')
+jest.mock('../../thunks/fetchData')
 
 describe('App', () => {
   let wrapper;
