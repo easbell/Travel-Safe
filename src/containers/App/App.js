@@ -24,11 +24,12 @@ export class App extends Component {
           </div>
         )} />
         <Route exact path='/saved' render={() => (
-            <div>
+          <div>
               <NavLink to='/'className='saved'>Home</NavLink>
               <SavedCountries />
             </div>
         )} />
+        { /* istanbul ignore next */ }
         <Route path='/details/:id' render={({ match }) => {
           const { id } = match.params;
           const selectedCountry = data.find(country => {

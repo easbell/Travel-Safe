@@ -16,6 +16,15 @@ export class Country extends Component {
 
   componentDidMount() {
     this.checkRating();
+    this.checkSaved();
+  }
+
+  checkSaved = ()  => {
+    const { id } = this.props
+    const localSaved = localStorage.getItem('saved')
+    if(localSaved && localSaved.includes(id)) {
+      this.setState({ saved: true })
+    }
   }
 
   checkRating = () => {
@@ -28,31 +37,37 @@ export class Country extends Component {
       this.setState({rating: 'H'})
     } else if(rating > 4.5) {
       this.setState({rating: 'E'})
-    } 
+    }
+  }
+
+  displayMessage = (message) => {
+    cogoToast.success(message, { 
+      position: 'bottom-left'
+    });
   }
 
   addCountry = () => {
-    const { id } = this.props
-    const localSaved = localStorage.getItem('saved')
-    const parsed = JSON.parse(localSaved)
-    if(parsed && !localSaved.includes(id)) {
-      this.setState({ saved: true }, () => {
-        localStorage.setItem('saved', JSON.stringify([...parsed, id]));
-      })
-      cogoToast.success('Country was added.', { 
-        position: 'bottom-left'
-      });
-    } else if(!parsed) {
-      this.setState({ saved: true }, () => {
-        localStorage.setItem('saved', JSON.stringify([id]));
-      });
-      cogoToast.success('Country was added.', { 
-        position: 'bottom-left'
-      });
+    const { id } = this.props;
+    const localSaved = JSON.parse(localStorage.getItem('saved'))
+    if(localSaved && !localSaved.includes(id)) {
+      localStorage.setItem('saved', JSON.stringify([...localSaved, id]));
+    } else if(!localSaved) {
+      localStorage.setItem('saved', JSON.stringify([id]));
+    }
+    this.displayMessage('Country was added to favorites.')      
+  }
+
+  toggleCountry = (e) => {
+    const { id } = this.props;
+    if(e.target.className.includes('countrySaved')) {
+      this.setState({ saved: false });
+      const localSaved = JSON.parse(localStorage.getItem('saved'))
+      const filteredSaved = localSaved.filter(country => country !== id)
+      localStorage.setItem('saved', JSON.stringify(filteredSaved));
+      this.displayMessage('Country removed from favorites.')
     } else {
-      cogoToast.error('Country already exists.', { 
-        position: 'bottom-left'
-      });
+      this.setState({ saved: true });
+      this.addCountry();
     }
   }
   
@@ -63,12 +78,13 @@ export class Country extends Component {
     const btnClass = classNames({
       btn: true,
       add: true,
-      countrySaved: saved,
+      countrySaved: saved
     });
+
     return (
       <div className='country'>
-        {saved && <button className={btnClass} onClick={this.addCountry}>-</button>}
-        {!saved && <button className={btnClass} onClick={this.addCountry}>+</button>}
+        {saved && <button className={btnClass} onClick={this.toggleCountry}>-</button>}
+        {!saved && <button className={btnClass} onClick={this.toggleCountry}>+</button>}
         <Link to={`/details/${id}`} style={{ textDecoration: 'none' }}>
           <h2>{name}</h2>
         </Link>

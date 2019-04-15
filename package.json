@@ -1,7 +1,5 @@
 {
   "name": "final",
-  "version": "0.1.0",
-  "private": true,
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
@@ -9,6 +7,8 @@
       "!src/reducers/index.js"
     ]
   },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
     "cogo-toast": "^1.0.4",
@@ -40,6 +40,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "enzyme-to-json": "^3.3.5",
+    "jest-localstorage-mock": "^2.4.0",
     "redux-devtools": "^3.5.0",
     "redux-devtools-extension": "^2.13.8"
   }
