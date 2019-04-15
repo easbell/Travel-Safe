@@ -3,25 +3,40 @@ import CountryContainer from '../../components/CountriesContainer/CountriesConta
 import { connect } from 'react-redux';
 
 export class SavedCountries extends Component {
-  filterCountries = () => {
+  state = {
+    filtered: []
+  }
+
+  componentDidMount() {
+    this.checkStorage();
+  }
+
+  checkStorage = () => {
     const localSaved = localStorage.getItem('saved')
-    if(!localSaved) return <p>Please add to favorites.</p>
-    const parsed = JSON.parse(localSaved)
+    if(!localSaved) return false
+    this.filterCountries(JSON.parse(localSaved))
+  }
+
+  filterCountries = (countries) => {
     let filtered = []
     this.props.data.forEach(country => {
-      parsed.forEach(savedCountry => {
+      countries.forEach(savedCountry => {
         if(country.id === savedCountry) {
           filtered.push(country)
         }
       })
     });
-    return <CountryContainer countries={filtered} />
+    this.setState({ filtered })
   }
 
   render() {
+    const { filtered } = this.state;
     return (
       <div>
-        {this.filterCountries()}
+        {filtered.length === 0 
+          ? <p>Please add to favorites.</p>
+          : <CountryContainer countries={filtered} /> 
+        }
       </div>
     )
   }

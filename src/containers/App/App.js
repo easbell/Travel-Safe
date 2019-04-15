@@ -20,24 +20,29 @@ export class App extends Component {
           <h1>Travel<span className='bold'>Safe</span></h1>
         </NavLink>
         <Route exact path='/' render={() => (
-          <div>
+          /* istanbul ignore next */ <div>
             <NavLink to='/saved' className='saved'>Saved</NavLink>
             <CountriesContainer countries={data}/>
           </div>
         )} />
         <Route exact path='/saved' render={() => (
+          /* istanbul ignore next */
           <div>
               <NavLink to='/' className='saved'>Home</NavLink>
               <SavedCountries />
             </div>
         )} />
-        { /* istanbul ignore next */ }
         <Route path='/details/:id' render={({ match }) => {
+          /* istanbul ignore next */
           const { id } = match.params;
+          /* istanbul ignore next */
           const selectedCountry = data.find(country => {
+            /* istanbul ignore next */
             return country.id === id
           })
+          /* istanbul ignore next */
           if(selectedCountry) {
+            /* istanbul ignore next */
             return <CountryDetails {...selectedCountry} />
           }
         }} />
