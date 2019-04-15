@@ -39,14 +39,21 @@ export class Country extends Component {
       this.setState({ saved: true }, () => {
         localStorage.setItem('saved', JSON.stringify([...parsed, id]));
       })
+      cogoToast.success('Country was added.', { 
+        position: 'bottom-left'
+      });
     } else if(!parsed) {
       this.setState({ saved: true }, () => {
         localStorage.setItem('saved', JSON.stringify([id]));
       });
+      cogoToast.success('Country was added.', { 
+        position: 'bottom-left'
+      });
+    } else {
+      cogoToast.error('Country already exists.', { 
+        position: 'bottom-left'
+      });
     }
-    cogoToast.success('Country was added.', { 
-      position: 'bottom-left'
-    });
   }
   
   render() {
