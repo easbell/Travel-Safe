@@ -1,5 +1,7 @@
 # TravelSafe
 
+#### Complied travel information for advisory levels and recommended vaccines.
+
 ## Set-Up
 - `clone` this repo
 - `clone` [back-end repo](https://github.com/easbell/travel-safe-api/)
