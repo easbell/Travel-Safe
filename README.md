@@ -2,6 +2,7 @@
 
 ## Set-Up
 - `clone` this repo
+- `clone` [back-end repo](https://github.com/easbell/travel-safe-api/)
 - `cd` into repo
 - `npm install`
 - `npm start`
