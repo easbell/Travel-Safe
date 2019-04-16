@@ -7,6 +7,7 @@ jest.mock('cogo-toast');
 
 describe('Country', () => {
   let wrapper;
+  let mockEvent;
 
   beforeEach(() => {
     wrapper = shallow(
@@ -53,28 +54,51 @@ describe('Country', () => {
   })
 
   describe('addCountry', () => {
-    let localStorageMock;
-
-    beforeEach(() => {
-      localStorageMock = {
-        getItem: jest.fn(),
-        setItem: jest.fn()
-      };
-      global.localStorage  = localStorageMock;
-    });
-
     it('should call localStorage.getItem', () => {
+      mockEvent = { target: { className: 'add' }}
+      wrapper.setState({ saved: false });
       wrapper = shallow(<Country id={5}/>);
-      wrapper.find('.add').simulate('click');
+      wrapper.find('.add').simulate('click', mockEvent);
       expect(localStorage.getItem).toHaveBeenCalled();
       expect(localStorage.setItem).toHaveBeenCalled();
     });
 
-    it('calls cogoToast.success', () => {
+    it.skip('calls cogoToast.success', () => {
       cogoToast.success = jest.fn();
       wrapper = shallow(<Country id={5}/>);
       wrapper.find('.add').simulate('click');
       expect(cogoToast.success).toHaveBeenCalled();
+    });
+  });
+
+  describe('toggleCountry', () => {
+    let mockEvent;
+
+    beforeEach(() => {
+      mockEvent = { target: { className: 'countrySaved' }}
+    });
+
+    it.skip('should invoke removeCountry', () => {
+      wrapper.setState({ saved: true });
+      wrapper.find('.countrySaved').simulate('click', mockEvent);
+      console.log(mockEvent)
+      const spy = jest.spyOn(wrapper.instance(), 'removeCountry');
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it.skip('should invoke addCountry', () => {
+      wrapper.setState({ saved: false });
+      mockEvent = { target: { className: 'add' }}
+      wrapper.find('.add').simulate('click', mockEvent);
+      const spy = jest.spyOn(wrapper.instance(), 'addCountry');
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it('should set state', () => {
+      wrapper.setState({ saved: false });
+      mockEvent = { target: { className: 'add' }}
+      wrapper.find('.add').simulate('click', mockEvent);
+      expect(wrapper.state('saved')).toBe(true);
     });
   });
 })

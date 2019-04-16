@@ -3,7 +3,7 @@ import { dataReducer } from '../dataReducer';
 
 describe('dataReducer', () => {
   it('should return default state', () => {
-    const initialState = {};
+    const initialState = [];
     expect(dataReducer(initialState, {})).toEqual(initialState);
   });
 

@@ -10,7 +10,7 @@ export class SavedCountries extends Component {
   componentDidMount() {
     this.checkStorage();
   }
-
+  
   checkStorage = () => {
     const localSaved = localStorage.getItem('saved')
     if(!localSaved) return false
