@@ -1,5 +1,11 @@
 # TravelSafe
 
+## Set-Up
+- `clone` this repo
+- `cd` into repo
+- `npm install`
+- `npm start`
+
 ### Screen Grabs
 
 ![Apr-16-2019 11-44-36](https://user-images.githubusercontent.com/34728115/56232014-0d10ff00-603d-11e9-9076-daa7ced044b5.gif)
