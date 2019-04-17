@@ -1,6 +1,6 @@
 # TravelSafe
 
-#### Complied travel information for advisory levels and recommended vaccines.
+#### Compiled travel information for advisory levels and recommended vaccines.
 
 ## Set-Up
 - `clone` this repo
