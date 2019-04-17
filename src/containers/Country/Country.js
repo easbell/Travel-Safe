@@ -54,7 +54,7 @@ export class Country extends Component {
     } else if(!localSaved) {
       localStorage.setItem('saved', JSON.stringify([id]));
     }
-    this.displayMessage('Country was added to favorites.')      
+    this.displayMessage('Country was saved')      
   }
 
   removeCountry = () => {
@@ -62,7 +62,7 @@ export class Country extends Component {
     const localSaved = JSON.parse(localStorage.getItem('saved'))
     const filteredSaved = localSaved.filter(country => country !== id)
     localStorage.setItem('saved', JSON.stringify(filteredSaved));
-    this.displayMessage('Country removed from favorites.')
+    this.displayMessage('Country was removed.')
   }
 
   toggleCountry = (e) => {
