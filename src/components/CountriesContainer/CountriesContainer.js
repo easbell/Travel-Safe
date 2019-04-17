@@ -10,7 +10,7 @@ export class CountriesContainer extends Component {
       return <Country key={country.name} {...country}/>
     });
   }
-
+  
   render() {
     const { countries } = this.props;
     const fuseConfig = {
@@ -19,7 +19,6 @@ export class CountriesContainer extends Component {
       tokenize: true,
       threshold: 0
     };
-
     return (
       <div>
         {countries.length === 57 && <InputFilter />}

@@ -43,7 +43,7 @@ ShallowWrapper {
           Afghanistan
         </h2>,
         <h4>
-          Safety Rating: 
+          Advisory Level: 
           5
            / 5
         </h4>,
@@ -51,24 +51,37 @@ ShallowWrapper {
           Recommended Vaccines:
         </h4>,
         Array [
-          <p>
-            most travelers
-            : 
-            Hepatitis A
-            Typhoid
-            Polio
-          </p>,
-          <p>
-            some travelers
-            : 
-            Hepatitis B
-            Cholera
-            Malaria
-            Rabies
-            Yellow Fever
-          </p>,
+          Array [
+            <p>
+              Hepatitis A
+            </p>,
+            <p>
+              Typhoid
+            </p>,
+            <p>
+              Polio
+            </p>,
+          ],
+          Array [
+            <p>
+              Hepatitis B
+            </p>,
+            <p>
+              Cholera
+            </p>,
+            <p>
+              Malaria
+            </p>,
+            <p>
+              Rabies
+            </p>,
+            <p>
+              Yellow Fever
+            </p>,
+          ],
         ],
       ],
+      "className": "details",
     },
     "ref": null,
     "rendered": Array [
@@ -89,14 +102,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Safety Rating: ",
+            "Advisory Level: ",
             5,
             " / 5",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "Safety Rating: ",
+          "Advisory Level: ",
           5,
           " / 5",
         ],
@@ -115,56 +128,90 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "Hepatitis A,Typhoid,Polio",
+        "key": "Hepatitis A",
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "most travelers",
-            ": ",
-            Array [
-              "Hepatitis A",
-              "Typhoid",
-              "Polio",
-            ],
-          ],
+          "children": "Hepatitis A",
         },
         "ref": null,
-        "rendered": Array [
-          "most travelers",
-          ": ",
-          "Hepatitis A",
-          "Typhoid",
-          "Polio",
-        ],
+        "rendered": "Hepatitis A",
         "type": "p",
       },
       Object {
         "instance": null,
-        "key": "Hepatitis B,Cholera,Malaria,Rabies,Yellow Fever",
+        "key": "Typhoid",
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "some travelers",
-            ": ",
-            Array [
-              "Hepatitis B",
-              "Cholera",
-              "Malaria",
-              "Rabies",
-              "Yellow Fever",
-            ],
-          ],
+          "children": "Typhoid",
         },
         "ref": null,
-        "rendered": Array [
-          "some travelers",
-          ": ",
-          "Hepatitis B",
-          "Cholera",
-          "Malaria",
-          "Rabies",
-          "Yellow Fever",
-        ],
+        "rendered": "Typhoid",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Polio",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Polio",
+        },
+        "ref": null,
+        "rendered": "Polio",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Hepatitis B",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Hepatitis B",
+        },
+        "ref": null,
+        "rendered": "Hepatitis B",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Cholera",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Cholera",
+        },
+        "ref": null,
+        "rendered": "Cholera",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Malaria",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Malaria",
+        },
+        "ref": null,
+        "rendered": "Malaria",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Rabies",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Rabies",
+        },
+        "ref": null,
+        "rendered": "Rabies",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": "Yellow Fever",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Yellow Fever",
+        },
+        "ref": null,
+        "rendered": "Yellow Fever",
         "type": "p",
       },
     ],
@@ -181,7 +228,7 @@ ShallowWrapper {
             Afghanistan
           </h2>,
           <h4>
-            Safety Rating: 
+            Advisory Level: 
             5
              / 5
           </h4>,
@@ -189,24 +236,37 @@ ShallowWrapper {
             Recommended Vaccines:
           </h4>,
           Array [
-            <p>
-              most travelers
-              : 
-              Hepatitis A
-              Typhoid
-              Polio
-            </p>,
-            <p>
-              some travelers
-              : 
-              Hepatitis B
-              Cholera
-              Malaria
-              Rabies
-              Yellow Fever
-            </p>,
+            Array [
+              <p>
+                Hepatitis A
+              </p>,
+              <p>
+                Typhoid
+              </p>,
+              <p>
+                Polio
+              </p>,
+            ],
+            Array [
+              <p>
+                Hepatitis B
+              </p>,
+              <p>
+                Cholera
+              </p>,
+              <p>
+                Malaria
+              </p>,
+              <p>
+                Rabies
+              </p>,
+              <p>
+                Yellow Fever
+              </p>,
+            ],
           ],
         ],
+        "className": "details",
       },
       "ref": null,
       "rendered": Array [
@@ -227,14 +287,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Safety Rating: ",
+              "Advisory Level: ",
               5,
               " / 5",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Safety Rating: ",
+            "Advisory Level: ",
             5,
             " / 5",
           ],
@@ -253,56 +313,90 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "Hepatitis A,Typhoid,Polio",
+          "key": "Hepatitis A",
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "most travelers",
-              ": ",
-              Array [
-                "Hepatitis A",
-                "Typhoid",
-                "Polio",
-              ],
-            ],
+            "children": "Hepatitis A",
           },
           "ref": null,
-          "rendered": Array [
-            "most travelers",
-            ": ",
-            "Hepatitis A",
-            "Typhoid",
-            "Polio",
-          ],
+          "rendered": "Hepatitis A",
           "type": "p",
         },
         Object {
           "instance": null,
-          "key": "Hepatitis B,Cholera,Malaria,Rabies,Yellow Fever",
+          "key": "Typhoid",
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "some travelers",
-              ": ",
-              Array [
-                "Hepatitis B",
-                "Cholera",
-                "Malaria",
-                "Rabies",
-                "Yellow Fever",
-              ],
-            ],
+            "children": "Typhoid",
           },
           "ref": null,
-          "rendered": Array [
-            "some travelers",
-            ": ",
-            "Hepatitis B",
-            "Cholera",
-            "Malaria",
-            "Rabies",
-            "Yellow Fever",
-          ],
+          "rendered": "Typhoid",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Polio",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Polio",
+          },
+          "ref": null,
+          "rendered": "Polio",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Hepatitis B",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Hepatitis B",
+          },
+          "ref": null,
+          "rendered": "Hepatitis B",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Cholera",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Cholera",
+          },
+          "ref": null,
+          "rendered": "Cholera",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Malaria",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Malaria",
+          },
+          "ref": null,
+          "rendered": "Malaria",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Rabies",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Rabies",
+          },
+          "ref": null,
+          "rendered": "Rabies",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": "Yellow Fever",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Yellow Fever",
+          },
+          "ref": null,
+          "rendered": "Yellow Fever",
           "type": "p",
         },
       ],
